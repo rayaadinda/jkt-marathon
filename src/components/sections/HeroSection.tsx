@@ -1,8 +1,10 @@
+"use client"
 import { ArrowUpRight } from "lucide-react"
 import { Button } from "../ui/button"
 import Navbar from "../ui/navbar"
 import Image from "next/image"
 import React from "react"
+import { Parallax } from "react-scroll-parallax"
 
 export default function HeroSection() {
 	return (
@@ -21,21 +23,23 @@ export default function HeroSection() {
 				</div>
 
 				<div className="absolute inset-0">
-					<div className="flex flex-col h-screen justify-center items-center">
-						<h1 className="text-white text-7xl font-sans font-medium text-center">
-							Run it to prove yourself
-						</h1>
-						<p className="text-white text-lg mt-8 text-center max-w-4xl font-sans font-light">
-							Join runners from around the world for the 21th Jakarta Marathon.{" "}
-							<br />
-							Conquer the course. Conquer yourself.
-						</p>
-						<Button className="mt-8 rounded-full font-sans" variant="secondary">
-							{" "}
-							Register now
-							<ArrowUpRight />
-						</Button>
-					</div>
+					<Parallax speed={-15}>
+						<div className="flex flex-col h-screen justify-center items-center px-4">
+							<h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-sans font-medium text-center leading-tight">
+								Run it to prove yourself
+							</h1>
+							<p className="text-white text-base sm:text-lg mt-6 text-center max-w-2xl font-sans font-light">
+								Join runners from around the world for the 21th Jakarta Marathon. Conquer the course. Conquer yourself.
+							</p>
+							<Button
+								className="mt-6 rounded-full font-sans text-sm sm:text-base px-6 sm:px-8"
+								variant="secondary"
+							>
+								Register now
+								<ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
+							</Button>
+						</div>
+					</Parallax>
 				</div>
 			</div>
 		</div>

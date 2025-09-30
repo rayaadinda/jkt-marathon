@@ -1,3 +1,4 @@
+"use client"
 import FaqSection from "@/components/sections/FaqSection"
 import HeroSection from "@/components/sections/HeroSection"
 import RouteSection from "@/components/sections/RouteSection"

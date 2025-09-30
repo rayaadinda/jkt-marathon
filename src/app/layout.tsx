@@ -3,6 +3,7 @@ import dynamic from "next/dynamic"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import FooterSection from "../components/sections/FooterSection"
+import ParallaxWrapper from "../components/ParallaxWrapper"
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -32,8 +33,10 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				{children}
-				<FooterSection />
+				<ParallaxWrapper>
+					{children}
+					<FooterSection />
+				</ParallaxWrapper>
 			</body>
 		</html>
 	)
